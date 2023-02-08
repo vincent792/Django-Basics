@@ -1,0 +1,35 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      {% for message in messages %}
+
+      <p class="alert alert-danger">{{message}}</p>
+      
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="jumbotron">
+        <h1 class="display-3">This is homepage</h1>
+        <p class="lead">happy coders</p>
+        <hr class="my-2">
+      
+          <img src="{% static 'img/img.jpg' %}" alt="">
+      
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+    {%  endblock %}
+      
